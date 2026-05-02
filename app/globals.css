@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-app-deep: #07050F;
+  --color-app-radial: #140B2D;
+  --color-app-ivory: #F7F3EA;
+  --color-app-surface: #FFFFFF;
+  --color-app-muted: #EBE6DC;
+  --color-app-text: #050505;
+  --color-app-text-muted: #4A4640;
+  --color-app-mint: #43D39E;
+  --color-app-deepmint: #0E855F;
+  --color-app-coral: #FF6B6B;
+  --color-app-champagne: #D8B86A;
+  --color-app-softgold: #FFF3C4;
+  --color-app-violet: #8B5CF6;
+  --color-app-coral: #FF6B4A;
+}
+
+body {
+  background-color: var(--color-app-deep);
+  color: var(--color-app-text);
+  overflow-x: hidden;
+}
+
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255,255,255,0.15), transparent 35%, transparent 65%, rgba(255,255,255,0.08));
+  opacity: 0.6;
+}
+
+/* Base custom classes to enforce the premium vibe */
+.champagne-gradient-text {
+  background: linear-gradient(135deg, #FFF3C4, #D8B86A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mint-gradient-text {
+  background: linear-gradient(135deg, #43D39E, #159B72);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
